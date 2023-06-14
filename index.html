@@ -8,6 +8,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
     :root {
+      /* Definisikan variabel tema */
       --rosewater: #f4dbd6;
       --flamingo: #f0c6c6;
       --pink: #f5bde6;
@@ -52,6 +53,21 @@
       height: 100vh;
     }
 
+    .profile-image {
+      border: 4px solid var(--overlay1); /* Menggunakan warna overlay1 dari tema */
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .profile-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
     h1 {
       font-size: 36px;
       text-align: center;
@@ -90,6 +106,9 @@
 </head>
 <body>
   <div class="container">
+    <div class="profile-image">
+      <img src="https://raw.githubusercontent.com/Eifal/eifal.github.io/main/-lnrkwe.jpg" alt="Foto Profil">
+    </div>
     <h1>eichan🌸えいちゃん</h1>
     <div class="profile-links">
       <a href="https://github.com/Eifal"><i class="fab fa-github"></i></a>
