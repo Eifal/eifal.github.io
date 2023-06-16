@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Eifal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-
+    /* Tema Warna */
     :root {
-      /* Definisikan variabel tema */
       --rosewater: #f4dbd6;
       --flamingo: #f0c6c6;
       --pink: #f5bde6;
@@ -37,70 +35,102 @@
       --crust: #181926;
     }
 
+    /* Styling kontainer */
     body {
-      background-color: var(--crust);
-      color: var(--text);
-      font-family: 'Noto Sans JP', Arial, sans-serif;
+      background-color: var(--base);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
       padding: 0;
+      font-family: 'Noto Sans JP', Arial, sans-serif;
     }
 
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
     }
 
+    /* Styling foto profil */
     .profile-image {
-      border: 4px solid var(--overlay1); /* Menggunakan warna overlay1 dari tema */
-      border-radius: 50%;
       width: 200px;
       height: 200px;
       overflow: hidden;
-      margin-bottom: 20px;
+      border-radius: 50%;
+      position: relative;
+      border: 2px solid var(--text);
     }
 
     .profile-image img {
       object-fit: cover;
       width: 100%;
       height: 100%;
+      transition: transform 0.3s ease;
     }
 
+    .profile-image:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Styling nama */
     h1 {
       font-size: 36px;
       text-align: center;
-      margin-bottom: 20px;
+      color: var(--text);
+      margin: 20px 0;
     }
 
+    /* Styling tautan sosial media */
     .profile-links {
       display: flex;
       justify-content: center;
-      border: 2px solid var(--maroon);
-      padding: 10px;
-      border-radius: 10px;
-      background-color: var(--surface1);
+      margin-top: 10px;
     }
 
     .profile-links a {
-      display: inline-block;
       margin: 0 10px;
       color: var(--text);
+      font-size: 30px;
       text-decoration: none;
-      font-size: 26px;
-    }
-
-    .profile-links a i {
-      font-size: 32px;
-      padding: 6px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.1);
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--surface1);
+      overflow: hidden;
+      margin-top: 1px;
+      margin-left: 0.5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .profile-links a i {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-links a:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--sapphire);
+      border-radius: 50%;
+      transform: scale(0);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .profile-links a:hover:before {
+      transform: scale(1);
     }
   </style>
 </head>
@@ -111,9 +141,9 @@
     </div>
     <h1>eichan🌸えいちゃん</h1>
     <div class="profile-links">
-      <a href="https://github.com/Eifal"><i class="fab fa-github"></i></a>
-      <a href="https://discordapp.com/users/888941811224150046/"><i class="fab fa-discord"></i></a>
-      <a href="https://twitter.com/eichanhacie"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Eifal" target="_blank"><i class="ri-github-line"></i></a>
+      <a href="https://discordapp.com/users/888941811224150046/" class="discord" target="_blank"><i class="ri-discord-line"></i></a>
+      <a href="https://twitter.com/eichanhacie" target="_blank"><i class="ri-twitter-line"></i></a>
     </div>
   </div>
 </body>
