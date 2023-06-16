@@ -115,6 +115,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: color 0.3s ease;
     }
 
     .profile-links a:before {
@@ -132,7 +133,33 @@
     .profile-links a:hover:before {
       transform: scale(1);
     }
+
+    .profile-links a:hover {
+      background-color: var(--sapphire);
+    }
+
+    .profile-links a:hover i {
+      color: var(--surface2);
+    }
   </style>
+  <script>
+    function addRippleEffect(event) {
+      const x = event.clientX - event.target.offsetLeft;
+      const y = event.clientY - event.target.offsetTop;
+
+      const rippleEffect = document.createElement("span");
+      rippleEffect.classList.add("ripple");
+      rippleEffect.style.left = `${x}px`;
+      rippleEffect.style.top = `${y}px`;
+
+      const target = event.target.closest("a");
+      target.appendChild(rippleEffect);
+
+      setTimeout(() => {
+        rippleEffect.remove();
+      }, 800);
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -141,9 +168,9 @@
     </div>
     <h1>eichan🌸えいちゃん</h1>
     <div class="profile-links">
-      <a href="https://github.com/Eifal" target="_blank"><i class="ri-github-line"></i></a>
-      <a href="https://discordapp.com/users/888941811224150046/" class="discord" target="_blank"><i class="ri-discord-line"></i></a>
-      <a href="https://twitter.com/eichanhacie" target="_blank"><i class="ri-twitter-line"></i></a>
+      <a href="https://github.com/Eifal" target="_blank" onclick="addRippleEffect(event)"><i class="ri-github-line"></i></a>
+      <a href="https://discordapp.com/users/888941811224150046/" class="discord" target="_blank" onclick="addRippleEffect(event)"><i class="ri-discord-line"></i></a>
+      <a href="https://twitter.com/eichanhacie" target="_blank" onclick="addRippleEffect(event)"><i class="ri-twitter-line"></i></a>
     </div>
   </div>
 </body>
