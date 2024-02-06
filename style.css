@@ -1,34 +1,7 @@
-:root {
-    --rosewater: #f4dbd6;
-    --flamingo: #f0c6c6;
-    --pink: #f5bde6;
-    --mauve: #c6a0f6;
-    --red: #ed8796;
-    --maroon: #ee99a0;
-    --peach: #f5a97f;
-    --yellow: #eed49f;
-    --green: #a6da95;
-    --teal: #8bd5ca;
-    --sky: #91d7e3;
-    --sapphire: #7dc4e4;
-    --blue: #8aadf4;
-    --lavender: #b7bdf8;
-    --text: #cad3f5;
-    --subtext1: #b8c0e0;
-    --subtext0: #a5adcb;
-    --overlay2: #939ab7;
-    --overlay1: #8087a2;
-    --overlay0: #6e738d;
-    --surface2: #5b6078;
-    --surface1: #494d64;
-    --surface0: #363a4f;
-    --base: #24273a;
-    --mantle: #1e2030;
-    --crust: #181926;
-  }
-  
+@import url('kanagawa.css');
+
   body {
-    background-color: var(--base);
+    background-color: var(--sumiInk4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +40,7 @@
   h1 {
     font-size: 36px;
     text-align: center;
-    color: var(--text);
+    color: var(--lotusViolet2);
     margin: 20px 0;
   }
   
@@ -79,7 +52,7 @@
   
   .profile-links a {
     margin: 0 10px;
-    color: var(--text);
+    color: var(--lotusGray);
     font-size: 30px;
     text-decoration: none;
     position: relative;
@@ -89,7 +62,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: var(--surface1);
+    background-color: var(--lotusInk1);
     overflow: hidden;
     margin-top: 1px;
     margin-left: 0.5px;
@@ -111,7 +84,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--sapphire);
+    background-color: var(--lotusGray);
     border-radius: 50%;
     transform: scale(0);
     transition: transform 0.3s ease;
@@ -123,17 +96,17 @@
   }
   
   .profile-links a:hover {
-    background-color: var(--sapphire);
+    background-color: var(--lotusGray);
   }
   
   .profile-links a:hover i {
-    color: var(--surface2);
+    color: var(--lotusInk1);
   }
   
   p {
     font-size: 22px;
     text-align: center;
-    color: var(--subtext0); 
+    color: var(--lotusBlue3); 
     margin-top: 3px;
     font-family: Monaco, monospace;
   }
