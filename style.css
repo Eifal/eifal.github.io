@@ -180,7 +180,7 @@ span{
     position: relative;
 }
 .typing-text span::before{
-    content: "Developer";
+    content: "Productive";
     color: #6581cd;
     animation: words 20s infinite;
 }
